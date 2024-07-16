@@ -4,7 +4,7 @@ This script exports a subset of objects in BIG-IQ to the screen and/or a file.
 
 ## Usage
 
-python3 bigiq-inventory-export.py [--csv _filename.csv_] [--virtual-servers] [--pools] [--poolmembers] 
+python3 bigiq-inventory-export.py [--csv _filename.csv_] [--debug]
 
 ## Notes
 
