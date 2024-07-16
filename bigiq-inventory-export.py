@@ -166,6 +166,9 @@ def main():
     pools = Retrieve_Pools()
     pool_members = Retrieve_Pool_Members()
     virtual_servers = pd.DataFrame(Retrieve_Virtual_Servers()['items'])
-    virtual_servers.to_csv('virtual_servers.csv', index=False)
+    if args.csv:
+      virtual_servers.to_csv('virtual_servers.csv', index=False)
+
+
 if __name__ == '__main__':
     main()
