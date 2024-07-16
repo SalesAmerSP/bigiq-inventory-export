@@ -6,7 +6,7 @@ import json
 import logging
 import argparse
 import sys
-import pandas
+import pandas as pd
 
 logging.basicConfig(level=logging.INFO,filename='bigiq-inventory-export.log')
 logger = logging.getLogger(__name__)
@@ -163,11 +163,9 @@ def main():
     username = args.username
     password = args.password
     host = args.hostname
-    virtual_servers = Retrieve_Virtual_Servers()
     pools = Retrieve_Pools()
     pool_members = Retrieve_Pool_Members()
-    for current_virtual_server in virtual_servers['items']:
-      print(current_virtual_server)
-
+    virtual_servers = pd.DataFrame(Retrieve_Virtual_Servers()['items'])
+    virtual_servers.to_csv('virtual_servers.csv', index=False)
 if __name__ == '__main__':
     main()
