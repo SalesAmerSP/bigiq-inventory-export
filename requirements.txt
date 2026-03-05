@@ -1,7 +1,6 @@
 certifi==2024.7.4
 charset-normalizer==3.3.2
 idna==3.7
-logging==0.4.9.6
 numpy==2.0.0
 pandas==2.2.2
 python-dateutil==2.9.0.post0
